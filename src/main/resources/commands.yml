@@ -1,0 +1,12 @@
+# Ana komut yapılandırması (FancyHolograms deseni).
+# enabled:false olan komut "kapalı" mesajı verir.
+# aliases çalışma anında uygulanır (varsayılan boş).
+commands:
+  enspillars:
+    enabled: true
+    aliases: []
+    description: "EnsPillars bilgi ve bakım komutu"
+  pof:
+    enabled: true
+    aliases: []
+    description: "Pillars ana oyun komutu"

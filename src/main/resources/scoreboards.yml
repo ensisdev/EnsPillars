@@ -1,0 +1,37 @@
+enabled: true
+title: "§b§lEnsPillars"
+WAITING:
+  - " "
+  - "§8• §fOyuncu: §b%player%"
+  - "§8• §fDurum: §7Bekleniyor..."
+  - "§8• §fOyuncular: §e%players%§8/§e%max%"
+  - " "
+ACTIVE:
+  - " "
+  - "§8• §fOyuncu: §b%player%"
+  - "§8• §fKalan: §e%time%"
+  - "§8• §fHayatta: §a%alive%"
+  - "§8• §fKill: §c%kills%"
+  - " "
+STARTING:
+  - " "
+  - "§8• §fOyuncu: §b%player%"
+  - "§8• §fBaşlıyor: §e%time%"
+  - "§8• §fOyuncular: §e%players%§8/§e%max%"
+  - " "
+PRE_GAME:
+  - " "
+  - "§8• §fOyuncu: §b%player%"
+  - "§8• §fHazırlan: §e%time%"
+  - " "
+CAGED:
+  - " "
+  - "§8• §fOyuncu: §b%player%"
+  - "§8• §fKafes açılıyor..."
+  - " "
+FINAL:
+  - " "
+  - "§8• §fOyuncu: §b%player%"
+  - "§8• §cFinal!"
+  - "§8• §fHayatta: §a%alive%"
+  - " "

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>EnsPillars Replay</title>
+  <link rel="stylesheet" href="/style.css"/>
+  <script type="importmap">{"imports":{"three":"/vendor/three.module.js","three/addons/":"/vendor/addons/"}}</script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div><strong>ENSPILLARS</strong><span id="subtitle">3D REPLAY</span></div>
+      <div id="status">Loading…</div>
+    </header>
+    <main>
+      <section id="viewer"><canvas id="scene"></canvas><div id="crosshair">+</div><div id="loading">Loading replay…</div></section>
+      <aside>
+        <div class="panel"><h3>Replay</h3><div id="meta"></div></div>
+        <div class="panel"><h3>Players</h3><div id="players"></div></div>
+        <div class="panel"><h3>Inspector</h3><div id="inspector">Click a player in the list.</div></div>
+        <div class="panel"><h3>Camera</h3><div class="buttons"><button data-camera="free">Free</button><button data-camera="top">Top</button><button data-camera="follow">Follow</button><button data-camera="first">First</button></div><div><label><input type="checkbox" id="killcam" checked/> Kill-cam</label></div></div>
+        <div class="panel"><h3>Export</h3><div class="buttons"><button id="shot">Screenshot</button><button id="clip">Record Clip</button></div></div>
+      </aside>
+    </main>
+    <footer>
+      <div class="controls"><button id="play">▶</button><button id="back">◀</button><button id="forward">▶</button><select id="speed"><option>.25x</option><option>.5x</option><option selected>1x</option><option>2x</option><option>4x</option><option>8x</option><option>16x</option></select><span id="time">0 / 0</span></div>
+      <input id="timeline" type="range" min="0" max="1" value="0" step="1"/>
+      <div id="events"></div>
+    </footer>
+  </div>
+  <script type="module">window.__ENS_REPLAY_ID__='__REPLAY_ID__'; import('/app.js');</script>
+</body>
+</html>

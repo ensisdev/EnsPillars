@@ -1,0 +1,108 @@
+# Yükseltme güvenliği: bu sayı kodun beklediğinden farklıysa açılışta
+# konsola uyarı yazılır (mevcut config EZİLMEZ, elle birleştirmen gerekir).
+config-version: 1
+update-check:
+  # Hangar slug'ın belli olunca doldur (örn. "EnsPillars"); boşken kontrol pasiftir.
+  enabled: false
+  platform: hangar # hangar | modrinth | github
+  slug: ""
+  # Github seçilirse "sahip/repo" yaz (örn. "EnsStudios/EnsPillars").
+  repo: ""
+settings:
+  language: tr
+  debug: false
+  auto-save-seconds: 60
+  max-party-size: 5
+setup:
+  spawn-height: 5
+global-lobby: null
+storage:
+  type: YAML # YAML, SQLITE, MYSQL
+  mysql:
+    host: "localhost"
+    port: 3306
+    database: "enspillars"
+    username: "root"
+    password: ""
+    pool-size: 5
+arenas:
+  directory: arenas
+loot:
+  per-player: true
+  table:
+    STONE: {min: 4, max: 12, weight: 8.0}
+    OAK_PLANKS: {min: 8, max: 24, weight: 7.0}
+    COBBLESTONE: {min: 4, max: 16, weight: 7.0}
+    APPLE: {min: 1, max: 3, weight: 5.0}
+    BREAD: {min: 2, max: 5, weight: 5.0}
+    IRON_INGOT: {min: 1, max: 3, weight: 3.0}
+    GOLDEN_APPLE: {min: 1, max: 1, weight: 0.5}
+    IRON_SWORD: {min: 1, max: 1, weight: 1.5}
+    BOW: {min: 1, max: 1, weight: 1.0}
+    ARROW: {min: 4, max: 12, weight: 2.0}
+    WATER_BUCKET: {min: 1, max: 1, weight: 1.0}
+    LAVA_BUCKET: {min: 1, max: 1, weight: 0.5}
+    ENDER_PEARL: {min: 1, max: 2, weight: 1.0}
+    SNOWBALL: {min: 8, max: 16, weight: 2.0}
+map-modes:
+  lava-rise: {interval-seconds: 8}
+  fragile: {break-after-seconds: 5}
+  tnt-rain: {interval-seconds: 12}
+game-modes:
+  shuffle: {interval-seconds: 20}
+  swap: {interval-seconds: 30}
+rewards:
+  win: {coins: 12, points: 8}
+  win-commands: []
+  draw: {coins: 1, points: 1}
+  draw-commands: []
+  kill: {coins: 4, points: 5}
+  kill-commands: []
+win-celebration:
+  duration-seconds: 5
+  fireworks: {enabled: true, count: 2, radius: 3.0}
+  fireworks-colors: [RED, YELLOW, LIME, AQUA, FUCHSIA]
+  particles: {enabled: true, type: HAPPY_VILLAGER, count: 30}
+  lightning: {enabled: true, chance: 33}
+chat:
+  formatting-enabled: true
+  per-arena-chat: true
+  spectator-chat: true
+  format: "&8• &e%points% &8• &f%player% &7→ &f"
+pregame-protection:
+  damage: true
+  item-drop: true
+  item-pickup: true
+  hunger: true
+  portal-travel: true
+display:
+  elder-guardian-effect: true
+general:
+  auto-join: false
+blacklisted-blocks: [BEDROCK, BARRIER, END_PORTAL_FRAME, TRIAL_SPAWNER]
+cosmetics:
+  default-cage: WHITE_STAINED_GLASS
+scoreboard:
+  enabled: true
+bossbar:
+  enabled: true
+replay:
+  enabled: true
+  directory: replays
+  keyframe-interval: 100
+  checkpoint-interval: 600
+  retention-days: 30
+  max-total-mb: 1024
+  web:
+    enabled: true
+    bind: "127.0.0.1"
+    port: 8765
+    # Boş bırakılırsa kimlik doğrulama yapılmaz. İnternete açık bind
+    # kullanıyorsanız mutlaka güçlü bir token belirleyin.
+    auth-token: ""
+    # Set this to the public address if you want clickable share links.
+    # Example: https://replays.example.com
+    public-url: ""
+  map-radius: 32
+  map-vertical-range: 24
+  max-initial-blocks: 120000

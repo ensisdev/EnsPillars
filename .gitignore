@@ -1,0 +1,28 @@
+# Gradle
+.gradle/
+build/
+out/
+
+# Compiled jars in repo root / libs
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# Kotlin / IntelliJ
+.kotlin/
+.idea/
+*.iml
+*.iws
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local test server (worlds, logs, caches, deployed plugins)
+test-sunucusu/
+
+# Runtime data accidentally copied next to source
+plugins/
+
+# Stray third-party server data (not part of this project)
+PillarsOfFortune/

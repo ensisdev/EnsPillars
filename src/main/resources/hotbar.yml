@@ -1,0 +1,17 @@
+lobby:
+  - {material: COMPASS, name: "&bArena Seç", lore: [], slot: 0, command: "pof menu"}
+  - {material: EMERALD, name: "&aMağaza", lore: [], slot: 4, command: "pof shop"}
+spectate:
+  - {material: COMPASS, name: "&eİzle", lore: [], slot: 0, command: "pof spectate"}
+  - {material: NETHER_STAR, name: "&aTekrar Oyna", lore: [], slot: 4, command: "pof autojoin"}
+  - {material: OAK_DOOR, name: "&cLobiye Dön", lore: [], slot: 8, command: "pof leave"}
+game:
+  - {material: WRITABLE_BOOK, name: "&bOy Ver", lore: [], slot: 0, command: "pof vote"}
+  - {material: CHORUS_FRUIT, name: "&cÇekil", lore: [], slot: 8, command: "pof leave"}
+winner:
+  - {material: NETHER_STAR, name: "&aTekrar Oyna", lore: [], slot: 4, command: "pof autojoin"}
+setup:
+  - {material: COMPASS, name: "&bArena Menüsü", lore: ["&7Yönetim panelini aç"], slot: 0, command: ""}
+  - {material: DIAMOND, name: "&bSpawn Yakalama", lore: ["&7Doğma bloklarını seç"], slot: 1, command: ""}
+  - {material: ENDER_EYE, name: "&dKafesleri Gör", lore: ["&7Kurulu spawnları denetle"], slot: 2, command: ""}
+  - {material: BARRIER, name: "&cKurulumdan Çık", lore: ["&7Envanter iade edilir"], slot: 8, command: ""}

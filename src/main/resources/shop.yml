@@ -1,0 +1,101 @@
+cages:
+  default:
+    name: "&fVarsayılan"
+    material: WHITE_STAINED_GLASS
+    lore: ["&7Sade beyaz kafes"]
+    price: 0
+  prison:
+    name: "&8Hapishane"
+    material: IRON_BARS
+    lore: ["&7Demir parmaklıklı kafes"]
+    price: 750
+  prismarine:
+    name: "&2Prizmarin"
+    material: PRISMARINE_BRICKS
+    lore: ["&7Okyanus esintisi"]
+    price: 1200
+    glow: true
+  emerald:
+    name: "&aZümrüt"
+    material: EMERALD_BLOCK
+    lore: ["&7Zengin görünüm"]
+    price: 2500
+    glow: true
+  gold:
+    name: "&6Altın"
+    material: GOLD_BLOCK
+    lore: ["&7Rütbe özel"]
+    price: 0
+    permission: "enspillars.cages.gold"
+  netherite:
+    name: "&8Netherit"
+    material: NETHERITE_BLOCK
+    lore: ["&7Efsanevi"]
+    price: 0
+    permission: "enspillars.cages.netherite"
+killmessages:
+  classic:
+    name: "&fKlasik"
+    material: IRON_SWORD
+    lore: ["&7Sade ölüm mesajı"]
+    price: 0
+    messages:
+      kill: "&b%killer% &7adlı oyuncuyu öldürdü &b%victim%"
+      void: "&b%victim% &7boşluğa düştü"
+      fall: "&b%victim% &7yüksekten düştü"
+  salty:
+    name: "&bTuzlu"
+    material: COD
+    lore: ["&7Biraz tuzlu"]
+    price: 350
+    messages:
+      kill: "&b%killer% &7tuzla buz etti &b%victim%"
+      void: "&b%victim% &7tuz gölüne düştü"
+      fall: "&b%victim% &7tuzla yere çakıldı"
+  inferno:
+    name: "&cCehennem"
+    material: BLAZE_POWDER
+    lore: ["&7Ateşli mesajlar"]
+    price: 500
+    messages:
+      kill: "&c%killer% &7yaktı kül etti &c%victim%"
+      void: "&c%victim% &7lav denizine gömüldü"
+      fall: "&c%victim% &7ateşler içinde düştü"
+deathcries:
+  oof:
+    name: "&fOof"
+    material: PLAYER_HEAD
+    lore: ["&7Klasik oof"]
+    price: 0
+    sound: "ENTITY_PLAYER_HURT"
+    pitch: "1.0"
+  creeper:
+    name: "&aCreeper"
+    material: CREEPER_HEAD
+    lore: ["&7Tsss..."]
+    price: 250
+    sound: "ENTITY_CREEPER_PRIMED"
+    pitch: "1.2"
+  anvil:
+    name: "&8Örs"
+    material: ANVIL
+    lore: ["&7Klang!"]
+    price: 600
+    sound: "BLOCK_ANVIL_LAND"
+    pitch: "0.9"
+  lightning:
+    name: "&eYıldırım"
+    material: LIGHTNING_ROD
+    lore: ["&7Gök gürültüsü"]
+    price: 1500
+    glow: true
+    sound: "ENTITY_LIGHTNING_BOLT_THUNDER"
+    pitch: "1.0"
+  dragon:
+    name: "&5Ejderha"
+    material: DRAGON_HEAD
+    lore: ["&7Efsanevi kükreme"]
+    price: 0
+    permission: "enspillars.deathcries.dragon"
+    sound: "ENTITY_ENDER_DRAGON_DEATH"
+    pitch: "1.0"

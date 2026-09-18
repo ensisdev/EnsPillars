@@ -1,0 +1,13 @@
+"""AST ureteci: docs/command-ast.json dosyasini duzenli yazar."""
+import json
+e_roots = [
+ {"name":"enspillars","permission":"enspillars.use","console":"allow","enabledFlag":"commands.enspillars.enabled","aliases":[],"branches":[
+  {"path":["info"],"permission":"enspillars.use","requiresPlayer":False,"contexts":["player","console","command-block"],"confirmation":"none","completion":[{"level":1,"source":"none"}],"handler":"InfoCommand.info","messages":["info"],"disposition":"preserve"},
+  {"path":["version"],"permission":"enspillars.use","requiresPlayer":False,"contexts":["player","console","command-block"],"confirmation":"none","completion":[{"level":1,"source":"none"}],"handler":"InfoCommand.info","messages":["info","version"],"disposition":"alias","compatNote":"info ile ayni"},
+  {"path":["help"],"permission":"enspillars.use","requiresPlayer":False,"contexts":["player","console","command-block"],"confirmation":"none","completion":[{"level":1,"source":"none"}],"handler":"InfoCommand.help","messages":["help"],"disposition":"preserve"},
+  {"path":["reload"],"permission":"enspillars.admin.reload","requiresPlayer":False,"contexts":["player","console","command-block"],"confirmation":"existing-reload-guard","completion":[{"level":1,"source":"literal:all,config,messages,arena,shop,scoreboards,hotbar","permissionGated":True},{"level":2,"source":"literal:confirm"}],"handler":"InfoCommand.reload","messages":["reload.confirm-warn","reload.done","reload.usage","reloaded"],"disposition":"preserve"},
+  {"path":["reload","<category>","confirm"],"permission":"enspillars.admin.reload","requiresPlayer":False,"contexts":["player","console","command-block"],"confirmation":"existing-reload-guard","completion":[{"level":1,"source":"literal:all,config,messages,arena,shop,scoreboards,hotbar","permissionGated":True},{"level":2,"source":"literal:confirm"}],"handler":"InfoCommand.reload","messages":["reload.confirm-warn","reload.done","reloaded"],"disposition":"extend"},
+  {"path":["import"],"permission":"enspillars.admin.import","requiresPlayer":False,"contexts":["player","console","command-block"],"confirmation":"confirm-token","completion":[{"level":1,"source":"literal:confirm","permissionGated":True}],"handler":"ImportRunner.run","messages":["confirm.warn","confirm.hint","import.backend-off","import.done"],"disposition":"extend","compatNote":"P0: artik iki asamali onay"},
+  {"path":["debug"],"permission":"enspillars.admin.debug","requiresPlayer":False,"contexts":["player","console","command-block"],"confirmation":"none","completion":[{"level":1,"source":"none","permissionGated":True}],"handler":"InfoCommand.debug","messages":["debug.line","debug.header"],"disposition":"fix","compatNote":"hardcoded messages.yml'e tasindi"},
+ ]},
+]

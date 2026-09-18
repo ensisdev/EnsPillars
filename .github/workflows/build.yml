@@ -1,0 +1,38 @@
+name: build
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 21 (runs Gradle; project compiles with a Java 17 toolchain)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Test + shadowJar
+        run: ./gradlew test shadowJar --no-daemon
+
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-report
+          path: build/reports/tests/test/
+
+      - name: Upload plugin jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: EnsPillars-jar
+          path: build/libs/*.jar

@@ -1,0 +1,39 @@
+id: example
+name: '&bExample Arena'
+enabled: false
+settings:
+  min-players: 2
+  max-players: 8
+  starting-countdown: 15
+  pre-game-time: 5
+  duration-seconds: 900
+  item-delay-seconds: 5
+  border-size: 50.0
+  height-min: -64
+  height-max: 320
+modes:
+  default-game-mode: NORMAL
+  default-map-mode: NORMAL
+voting:
+  enabled: true
+  duration-seconds: 10
+  game-modes: [NORMAL, SHUFFLE, SWAP]
+  map-modes: [NORMAL, LAVA_RISE, FRAGILE]
+modifiers:
+  shrinking-border:
+    enabled: false
+    final-size: 8.0
+    duration-seconds: 180
+locations:
+  lobby: null
+  spectator: null
+  center: null
+  spawns: []
+rules:
+  pvp: true
+  natural-regeneration: true
+  keep-inventory: false
+  allow-build: true
+  allow-break: true
+loot:
+  per-player: true

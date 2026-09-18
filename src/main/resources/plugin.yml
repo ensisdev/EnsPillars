@@ -1,0 +1,42 @@
+name: EnsPillars
+version: '${version}'
+main: dev.ensisdev.enspillars.EnsPillarsPlugin
+api-version: '1.20'
+author: EnsStudios
+description: Advanced modular Pillars of Fortune minigame.
+website: https://discord.gg/xnE8zYkCyz
+softdepend: [PlaceholderAPI]
+commands:
+  enspillars:
+    description: EnsPillars bilgi ve bakım komutu
+    usage: /enspillars <info|help|reload|import|debug>
+    permission: enspillars.use
+  pof:
+    description: Pillars ana oyun komutu
+    usage: /pof <join|leave|menu|stats|shop|vote|party|spectate|autojoin|replay|arena|setup|setspawn|forcestart|cosmetics|leaderboard|help>
+    permission: enspillars.use
+permissions:
+  enspillars.use: {default: true}
+  enspillars.vote: {default: true}
+  enspillars.party: {default: true}
+  enspillars.cosmetics: {default: true}
+  enspillars.stats: {default: true}
+  enspillars.replay: {default: true}
+  enspillars.forcestart: {default: op}
+  enspillars.admin:
+    default: op
+    children:
+      enspillars.admin.reload: true
+      enspillars.admin.import: true
+      enspillars.admin.arena: true
+      enspillars.admin.debug: true
+      enspillars.admin.setup: true
+      enspillars.forcestart: true
+  enspillars.admin.reload: {default: op}
+  enspillars.admin.import: {default: op}
+  enspillars.admin.arena: {default: op}
+  enspillars.admin.debug: {default: op}
+  enspillars.admin.setup: {default: op}
+  enspillars.cages.gold: {default: op}
+  enspillars.cages.netherite: {default: op}
+  enspillars.deathcries.dragon: {default: op}
