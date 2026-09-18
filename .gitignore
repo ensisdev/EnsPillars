@@ -26,3 +26,12 @@ plugins/
 
 # Stray third-party server data (not part of this project)
 PillarsOfFortune/
+tools/
+schemas/
+public/
+docs/
+branding
+PHASE1_CHECKLIST.md
+PHASE2_CHECKLIST.md
+PHASE3_CHECKLIST.md
+REPLAY_SYSTEM.md
